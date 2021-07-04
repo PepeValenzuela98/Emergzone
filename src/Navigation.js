@@ -8,12 +8,13 @@ const Stack = createStackNavigator();
 
 const Navigation = () => {
   const {authenticated, token} = useSelector(state => state.user);
+  
   const dispatch = useDispatch();
   useEffect(() => {
     if (token) {
       //TODO: Authenticate
     }
-  }, []);
+  }, [authenticated]);
 
   return (
     <Stack.Navigator headerMode={'none'}>
